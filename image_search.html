@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Image Search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		
+			* {
+				box-sizing: border-box;
+			}
+				
+			.navbar {
+				width: 100%;
+				height: 50px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			//	background-color: yellow;	
+			}
+			
+			.navbar a {
+				color: #000000DE;
+				padding: 5px; 
+				margin: 3px;
+				font-size: 13px;
+				text-decoration: none;
+			}
+			
+			.navbar a:hover {
+				color: black;
+				text-decoration: underline;
+			}
+			
+			body {
+				font-family: arial, sans-serif;
+				margin:0px 0px 0px 0px;
+				padding:0px;
+			//	background:#81F7F3;		
+			}
+				
+			div.container {
+				display: flex;
+				width: 100%;
+				justify-content: center;
+			//	background: violet;		
+			}
+
+			/* This container holds image, search bar and buttons */
+			div.container2 {
+				width: 536px;
+				display: flex;
+				flex-direction: column;
+			//	background-color : 	LawnGreen;	
+			}
+			
+			div.container4logoimages {
+				width: 536px;
+				display: flex;
+				justify-content: center;
+				position: relative;
+			//	background-color: pink;		
+
+			}
+			
+			#googlelogo {
+				display : flex;
+				height: auto;
+				width: 272px;
+				margin-top: 150px;
+			//	background-color: yellowgreen;	
+			}			
+			
+			.bottomright {
+				position: absolute;
+				bottom: 1px;
+				right: 136px;
+				font-size: 16px;
+				color: #4285F4;	
+			}
+			
+			div.container3 {
+			//	background-color: 	YellowGreen;     
+				position: relative;
+			}
+					
+			#searchbar {
+				width: 536px;
+				border-radius: 50px;
+				margin-top: 25px;
+				border: 1px solid #D8D8D8;
+			}		
+
+			#searchicon {
+				width: 14px;
+				position: absolute;
+				top: 36px;
+				left: 14px;
+			//	background-color: orange;
+			}
+			
+			#voicesearchicon {
+				width: 14px;
+				position: absolute;
+				top: 36px;
+				right: 58px;
+			//	background-color: orange;
+			}			
+			
+			#searchiconblue {
+				width: 17px;
+				position: absolute;
+				top: 36px;
+				right: 18px;
+			}
+			
+			#cameraicon {
+				width: 18px;
+				position: absolute;
+				top: 36px;
+				right: 98px;
+			}
+			
+			/* This container holds two buttons */
+			div.container4 {
+				display: flex;
+				justify-content: center;
+				height: auto;
+			//	background-color: orange;	
+			}			
+			
+			input[type=text] {
+				width: 536px;
+				padding: 12px 148px 12px 35px;
+				font-size: 16px;
+				border-radius: 50px;
+				margin-top: 20px;
+				border: 2px solid #D8D8D8;
+			}
+			
+			input[type=submit] {
+				width: 160px;
+				padding: 4px;
+				margin: 30px 170px 15px 170px;
+			}
+			
+			input:hover {
+				box-shadow: 3px 3px 3px #888888;
+			}
+			
+			.footer1 {
+				position: fixed;
+				bottom: 36px;
+				width: 100%;
+				font-size: 15px;
+				border: 1px solid #D8D8D8;
+				color: #0000008A;
+				margin: 0px 0px 0px 0px;
+				padding: 0px 0px 0px 27px;
+				background-color: #F2F2F2;
+			}
+
+			.footer2container {
+				display: flex;
+				justify-content: space-between;
+				position: fixed;
+				bottom: 0px;
+				width: 100%;
+				line-height: 36px;
+				border: 1px solid #D8D8D8;
+				color: #0000008A;
+				margin: 0px 0px 0px 0px;
+				padding: 0px 10px 0px 10px;
+				background-color: #F2F2F2;
+			}
+			
+			.footer2container a {
+				padding : 0px 17px 0px 17px;
+				font-size: 14px;
+				text-decoration: none;
+				color: #70757A;
+			}
+			
+			.footer2container a:hover {
+				color: black;
+				text-decoration: underline;
+			}			
+		
+			@media screen and (max-width:800px) {			
+				.footer2container {
+					text-align: center;
+					flex-direction: column;
+				//	background-color: yellow;
+				}
+				.footer1 {
+					bottom: 72px;
+				}
+				#f2a {
+					order: 2;
+				}				
+				#f2b {
+					order: 1;
+				}				
+			}		
+	
+		</style>
+    </head>
+    <body>
+		<div class="navbar">
+			<a href="search.html">Google Search</a>
+		</div>
+		<div class="container">
+			<!-- This container2 contains image and form (incl. search bar and buttons) -->
+			<div class="container2">
+				<div class="container4logoimages">
+					<img id="googlelogo" alt="Google logo" src="googlelogo.png">
+					<div class="bottomright">images</div>
+				</div>
+				<!-- This container3 contains form (including search bar and buttons)  -->
+				<div class="container3">
+					<form action="https://google.com/search" >
+						<input class="searchbar" type="text" maxlength="2048" autofocus  placeholder="Search Google or Type URL" name="q" ></br>
+							<img id="searchicon" src="search-icon.png" alt="search icon" >
+							<img id="voicesearchicon" src="mic.png" alt="voice search icon" >					
+							<img id="searchiconblue" src="search-icon-blue.png" alt="search icon blue" >
+							<img id="cameraicon" src="camera-icon.png" alt="camera icon" >
+						<div class="container4">
+							<input type="hidden" name="tbm" value="isch" >
+							<input type="submit" value="Google Image Search">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<div>
+			<div class="footer1">
+				<p>Hong Kong</p>
+			</div>
+			<div class="footer2container">
+				<div id="f2a">
+					<a href="#">Advertising</a>
+					<a href="#">Business</a>
+					<a href="#">About</a>
+					<a href="#">How Search works</a>
+				</div>
+				<div id="f2b">
+					<a href="#">Privacy</a>
+					<a href="#">Terms</a>
+					<a href="#">Settings</a>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

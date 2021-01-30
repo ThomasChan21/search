@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Advanced Search</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		
+			* {
+				box-sizing: border-box;
+			}
+				
+			.navbar {
+				width: 100%;
+				height: 50px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			//	background-color: yellow;		//for debugging
+			}
+			
+			.navbar a {
+				color: #000000DE;
+				padding: 5px; 
+				margin: 3px;
+				font-size: 13px;
+				text-decoration: none;
+			}
+			
+			.navbar a:hover {
+				color: black;
+				text-decoration: underline;
+			}
+			
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				margin:9px 9px 0px 9px;
+				padding:0px;
+			//	background:#81F7F3;		//for debugging
+			}	
+			
+			th, td {
+				padding: 5px;
+				text-align: left;
+			}
+			
+			.row-1 {
+				font-size: 16px;
+				color: #333333;				
+			}
+			.col-1 {
+				width: 200px;
+				font-size: 13px;
+			}
+			
+			.col-2 {
+				min-width: 400px;
+			}
+			
+			.col-3 {
+				width: 400px;
+				font-size: 13px;
+			}
+			#as {
+				color: #D93025;
+				font-size: 20px;
+			}
+			
+			#as_row {
+				display: flex;
+				justify-content: flex-end;
+			}
+			
+			#as_btn {
+				background-color: #4D90FE;
+				color: white;
+				margin: 10px 0px;
+				padding: 0px 12px;
+				height: 30px;
+			}
+			
+			input[type=text] {
+				width: 100%;
+				padding: 5px 5px;
+
+			}
+						
+			input:hover {
+				box-shadow: 3px 3px 3px #888888;
+			}
+
+			.col-3 {
+				display: none;
+			}
+
+			@media screen and (min-width:800px) and (max-width: 1000px) {
+				.col-3 {
+					display: table-cell;
+					visibility: hidden;
+				}
+			}
+
+			@media screen and (min-width: 1000px) {
+				.col-3 {
+					display: table-cell;
+				}
+			}
+			
+			.footer1 {
+				position: fixed;
+				bottom: 36px;
+				width: 100%;
+				font-size: 15px;
+				border: 1px solid #D8D8D8;
+				color: #0000008A;
+				margin: 0px 0px 0px 0px;
+				padding: 0px 0px 0px 27px;
+				background-color: #F2F2F2;
+			}
+
+			.footer2container {
+				display: flex;
+				justify-content: flext-start;
+				position: fixed;
+				bottom: 0px;
+				width: 100%;
+				line-height: 36px;
+				border: 1px solid #D8D8D8;
+				color: #0000008A;
+				margin: 0px 0px 0px 0px;
+				padding: 0px 10px 0px 10px;
+				background-color: #F2F2F2;
+			}
+			
+			.footer2container a {
+				padding : 0px 17px 0px 17px;
+				font-size: 14px;
+				text-decoration: none;
+				color: #70757A;
+			}
+			
+			.footer2container a:hover {
+				color: black;
+				text-decoration: underline;
+			}			
+
+		</style>
+    </head>
+    <body>
+		<div class="navbar">
+			<a href="search.html">Google Search</a>
+		</div>
+		<h3 id="as" > Advanced Search </h3>
+		<div class="container">
+			<form action="https://google.com/search" >
+				<table style="width:100%">
+					<tr class="row-1">
+						<td class="col-1">Find pages with...</td>
+						<td class="col-2"></td>
+						<td class="col-3">To do this in the search box.</td>
+					</tr>
+					<tr>
+						<td class="col-1">all these words:</td>
+						<td class="col-2"><input type="text" name="as_q" ></td>
+						<td class="col-3">Type the important words: tri-colour rat terrier</td>
+					</tr>
+					<tr>
+						<td class="col-1">this exact word or phrase:</td>
+						<td class="col-2"><input type="text" name="as_epq"></td>
+						<td class="col-3">Put exact words in quotes: "rat terrier"</td>
+					</tr>
+					<tr>
+						<td class="col-1">any of these words:</td>
+						<td class="col-2"><input type="text" name="as_oq"></td>
+						<td class="col-3">Type OR between all the words you want: miniature OR standard</td>
+					</tr>
+					<tr>
+						<td class="col-1">none of these words:</td>
+						<td class="col-2"><input type="text" name = "as_eq"></td>
+						<td class="col-3">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</td>
+					</tr>	
+					<tr>
+						<td></td>
+						<td>
+							<div id="as_row">
+								<input id="as_btn" type="submit" value="Advanced Search"></td>
+							</div>
+						<td></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		
+		<!-- Footer -->
+		<div>
+			<div class="footer1">
+				<p>Hong Kong</p>
+			</div>
+			<div class="footer2container">
+				<div id="f2">
+					<a href="#">Help</a>
+					<a href="#">Privacy</a>
+					<a href="#">Terms</a>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
